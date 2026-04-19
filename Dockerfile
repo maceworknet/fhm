@@ -2,13 +2,15 @@ FROM webdevops/php-nginx:8.3
 
 WORKDIR /app
 
-# Node kurulumu
-RUN apt-get update && apt-get install -y nodejs npm
+# Node 20 kur
+RUN apt-get update && apt-get install -y curl \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
-# Projeyi kopyala
+# Proje kopyala
 COPY . /app
 
-# Composer install
+# PHP bağımlılıkları
 RUN composer install --no-dev --optimize-autoloader
 
 # Frontend build
