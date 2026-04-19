@@ -1,0 +1,11 @@
+tree:
+  -
+    entry: home
+  -
+    entry: services_page
+  -
+    entry: projects_page
+  -
+    entry: blog_page
+  -
+    entry: contact_page

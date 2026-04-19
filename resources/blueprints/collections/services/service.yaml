@@ -1,0 +1,177 @@
+title: Service
+tabs:
+  main:
+    display: Icerik
+    sections:
+      -
+        display: Ust Alan
+        fields:
+          -
+            handle: service_image
+            field:
+              type: assets
+              display: Gorsel
+              container: assets
+              max_files: 1
+              mode: list
+          -
+            handle: hero_kicker
+            field:
+              type: text
+              display: Ust Etiket
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: Kisa Aciklama
+      -
+        display: Sidebar
+        fields:
+          -
+            handle: sidebar_title
+            field:
+              type: text
+              display: Sidebar Basligi
+          -
+            handle: sidebar_excerpt
+            field:
+              type: textarea
+              display: Sidebar Aciklamasi
+          -
+            handle: sidebar_widget_mode
+            field:
+              type: select
+              display: Widget Kullanimi
+              default: inherit
+              clearable: false
+              options:
+                inherit: Varsayilanlari Kullan
+                append: Varsayilanlara Ekle
+                replace: Sadece Bu Hizmetin Widgetlarini Kullan
+          -
+            handle: hide_sidebar_widgets_on_mobile
+            field:
+              type: toggle
+              display: Widgetlari Mobilde Gizle
+              instructions: Aciksa sidebar widgetlari mobilde gosterilmez, sadece ust ozet alani kalir.
+              default: false
+          -
+            handle: sidebar_widgets
+            field:
+              type: replicator
+              display: Sidebar Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Icerik Navigasyonu
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Son Eklenen Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 3
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Menu
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            validate:
+                              - required
+                    project_details:
+                      display: Proje Detaylari
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Proje Detaylari
+                            replicator_preview: true
+                        -
+                          handle: show_project_type
+                          field:
+                            type: toggle
+                            display: Is Turunu Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_category
+                          field:
+                            type: toggle
+                            display: Kategoriyi Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_sector
+                          field:
+                            type: toggle
+                            display: Sektoru Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_completion_year
+                          field:
+                            type: toggle
+                            display: Yili Goster
+                            default: true
+                            width: 50
+                        -
+                          handle: show_project_location
+                          field:
+                            type: toggle
+                            display: Sehir/Lokasyonu Goster
+                            default: true
+                            width: 50
+      -
+        display: Detay Icerigi
+        fields:
+          -
+            handle: service_scope
+            field:
+              type: markdown
+              display: Kapsam
+          -
+            handle: service_results
+            field:
+              type: markdown
+              display: Kazanimlar
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Uzun Icerik

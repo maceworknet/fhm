@@ -1,0 +1,31 @@
+<section class="blog-page-section section-space">
+    <div class="shell blog-page-layout">
+        <div class="blog-page-main">
+            <div class="blog-page-grid">
+                {{ collection:blog sort="published_on:desc" }}
+                    {{ partial:partials/blog-card }}
+                {{ /collection:blog }}
+            </div>
+
+            {{ if content }}
+                <article class="blog-page-content prose-wrapper" data-reveal>
+                    {{ content }}
+                </article>
+            {{ /if }}
+        </div>
+
+        <aside class="inner-page-sidebar blog-page-sidebar">
+            <div class="inner-page-sidebar-rail">
+                <section class="inner-page-summary" data-reveal>
+                    <span class="inner-page-summary-line"></span>
+                    <h1 class="inner-page-summary-title">{{ sidebar_title ?? title }}</h1>
+                    {{ if sidebar_excerpt || hero_text }}
+                        <p class="inner-page-summary-text">{{ sidebar_excerpt ?? hero_text }}</p>
+                    {{ /if }}
+                </section>
+
+                {{ partial:partials/inner-page-widgets widget_scope="page" }}
+            </div>
+        </aside>
+    </div>
+</section>

@@ -1,0 +1,54 @@
+<section class="inner-page-section">
+    <div class="shell inner-page-grid">
+        <div class="inner-page-media-wrap" data-reveal>
+            <div class="inner-page-media-surface">
+                {{ if featured_image }}
+                    {{ featured_image }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt ?? title }}"
+                            class="inner-page-media-image"
+                        >
+                    {{ /featured_image }}
+                {{ else }}
+                    <div class="inner-page-media-placeholder">
+                        <span>{{ title }}</span>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        <aside class="inner-page-sidebar">
+            <div class="inner-page-sidebar-rail">
+                <section class="inner-page-summary" data-reveal>
+                    <span class="inner-page-summary-line"></span>
+                    <h1 class="inner-page-summary-title">{{ sidebar_title ?? title }}</h1>
+                    {{ if sidebar_excerpt || hero_text }}
+                        <p class="inner-page-summary-text">{{ sidebar_excerpt ?? hero_text }}</p>
+                    {{ /if }}
+                </section>
+
+                {{ partial:partials/inner-page-widgets widget_scope="page" }}
+            </div>
+        </aside>
+
+        <div class="inner-page-main">
+            {{ partial:partials/breadcrumb }}
+
+            <div class="inner-page-content-stack" data-inner-page-content>
+                {{ if hero_title }}
+                    <section class="inner-page-article-surface inner-page-intro-surface" data-reveal>
+                        {{ if hero_kicker }}
+                            <span class="eyebrow">{{ hero_kicker }}</span>
+                        {{ /if }}
+                        <h2 class="inner-page-intro-title">{{ hero_title }}</h2>
+                    </section>
+                {{ /if }}
+
+                <article class="inner-page-article-surface prose-wrapper inner-page-article" data-reveal>
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+{{ if client_logos }}
+    <section class="logo-showcase-section section-space">
+        <div class="shell">
+            <div class="logo-showcase-head" data-reveal>
+                {{ if logo_showcase_label }}
+                    <span class="logo-showcase-label">{{ logo_showcase_label }}</span>
+                {{ /if }}
+                {{ if logo_showcase_title }}
+                    <h2 class="logo-showcase-title">{{ logo_showcase_title }}</h2>
+                {{ /if }}
+            </div>
+
+            <div class="logo-showcase-marquee" data-reveal>
+                <div class="logo-showcase-track">
+                    {{ client_logos }}
+                        <div class="logo-showcase-item">
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt ?? 'Musteri logosu' }}"
+                                class="logo-showcase-logo"
+                                draggable="false"
+                            >
+                        </div>
+                    {{ /client_logos }}
+
+                    {{ client_logos }}
+                        <div class="logo-showcase-item" aria-hidden="true">
+                            <img
+                                src="{{ url }}"
+                                alt=""
+                                class="logo-showcase-logo"
+                                draggable="false"
+                            >
+                        </div>
+                    {{ /client_logos }}
+                </div>
+            </div>
+        </div>
+    </section>
+{{ /if }}

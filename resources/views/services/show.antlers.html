@@ -1,0 +1,65 @@
+<section class="inner-page-section">
+    <div class="shell inner-page-grid">
+        <div class="inner-page-media-wrap" data-reveal>
+            <div class="inner-page-media-surface">
+                {{ if service_image }}
+                    {{ service_image }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt ?? title }}"
+                            class="inner-page-media-image"
+                        >
+                    {{ /service_image }}
+                {{ else }}
+                    <div class="inner-page-media-placeholder">
+                        <span>{{ title }}</span>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        <aside class="inner-page-sidebar">
+            <div class="inner-page-sidebar-rail">
+                <section class="inner-page-summary" data-reveal>
+                    <span class="inner-page-summary-line"></span>
+                    <h1 class="inner-page-summary-title">{{ sidebar_title ?? title }}</h1>
+                    {{ if sidebar_excerpt || hero_text }}
+                        <p class="inner-page-summary-text">{{ sidebar_excerpt ?? hero_text }}</p>
+                    {{ /if }}
+                </section>
+
+                {{ partial:partials/inner-page-widgets widget_scope="service" }}
+            </div>
+        </aside>
+
+        <div class="inner-page-main">
+            {{ partial:partials/breadcrumb parent_title="Hizmetler" parent_url="/hizmetler" }}
+
+            <div class="inner-page-content-stack" data-inner-page-content>
+                {{ if service_scope || service_results }}
+                    <div class="inner-page-panel-grid">
+                        {{ if service_scope }}
+                            <article class="inner-page-article-surface prose-wrapper inner-page-panel-surface" data-reveal>
+                                <span class="eyebrow">Kapsam</span>
+                                <h2 class="inner-page-panel-title">Uygulama Cercevesi</h2>
+                                {{ service_scope }}
+                            </article>
+                        {{ /if }}
+
+                        {{ if service_results }}
+                            <article class="inner-page-article-surface prose-wrapper inner-page-panel-surface" data-reveal>
+                                <span class="eyebrow">Kazanimlar</span>
+                                <h2 class="inner-page-panel-title">Projeye Etkisi</h2>
+                                {{ service_results }}
+                            </article>
+                        {{ /if }}
+                    </div>
+                {{ /if }}
+
+                <article class="inner-page-article-surface prose-wrapper inner-page-article" data-reveal>
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+title: Projects
+template: projects/show
+layout: layout
+route: 'projeler/{slug}'
+sort_by: title
+sort_dir: asc

@@ -1,0 +1,28 @@
+<section class="contact-page-surface" data-reveal>
+    <div class="contact-page-surface-head">
+        <span class="eyebrow">Iletisim Bilgileri</span>
+        <h2 class="contact-page-surface-title">Dogrudan erisilebilir, sade iletisim akisi</h2>
+        <p class="contact-page-surface-copy">
+            Teklif, kesif ve revizyon talepleriniz icin temel proje basliklariyla bize ulasmaniz yeterli. Ilk gorusmede kapsam, lokasyon ve dogru baslangic adimlarini hizlica netlestiriyoruz.
+        </p>
+    </div>
+
+    <div class="contact-page-grid">
+        <article class="contact-page-card">
+            <span class="contact-page-card-label">Telefon</span>
+            <a href="{{ contact_settings:phone_link }}" class="contact-page-card-link">{{ contact_settings:phone_display }}</a>
+        </article>
+        <article class="contact-page-card">
+            <span class="contact-page-card-label">E-posta</span>
+            <a href="{{ contact_settings:email_link }}" class="contact-page-card-link">{{ contact_settings:email }}</a>
+        </article>
+        <article class="contact-page-card">
+            <span class="contact-page-card-label">Adres</span>
+            <p class="contact-page-card-text">{{ contact_settings:address }}</p>
+        </article>
+        <article class="contact-page-card">
+            <span class="contact-page-card-label">Calisma Saatleri</span>
+            <p class="contact-page-card-text">{{ contact_settings:working_hours }}</p>
+        </article>
+    </div>
+</section>

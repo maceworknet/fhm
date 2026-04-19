@@ -1,0 +1,11 @@
+<div class="breadcrumb">
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="/" class="breadcrumb-link">Ana Sayfa</a>
+        <span>/</span>
+        {{ if parent_title }}
+            <a href="{{ parent_url }}" class="breadcrumb-link">{{ parent_title }}</a>
+            <span>/</span>
+        {{ /if }}
+        <span class="text-slate-950">{{ title }}</span>
+    </nav>
+</div>

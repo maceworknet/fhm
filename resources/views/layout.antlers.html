@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ if title }}{{ title }} | {{ /if }}{{ site_settings:company_name ?? site:name }}</title>
+        <meta
+            name="description"
+            content="{{ hero_text ?? excerpt ?? site_settings:company_summary }}"
+        >
+        <meta name="theme-color" content="#0b1726">
+        {{ site_settings:favicon }}
+            <link rel="icon" href="{{ url }}"{{ if mime_type }} type="{{ mime_type }}"{{ /if }}>
+            <link rel="shortcut icon" href="{{ url }}">
+            <link rel="apple-touch-icon" href="{{ url }}">
+        {{ /site_settings:favicon }}
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+    </head>
+    <body class="site-shell">
+        <a href="#content" class="skip-link">İçeriğe geç</a>
+        {{ partial:partials/header }}
+        <main id="content">
+            {{ template_content }}
+        </main>
+        {{ partial:partials/footer }}
+        <button type="button" class="back-to-top" aria-label="Sayfanin en ustune don" data-back-to-top>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                    d="M12 19V5M12 5l-6 6M12 5l6 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </button>
+    </body>
+</html>

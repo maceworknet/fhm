@@ -1,0 +1,6 @@
+title: Services
+template: services/show
+layout: layout
+route: 'hizmetler/{slug}'
+sort_by: title
+sort_dir: asc

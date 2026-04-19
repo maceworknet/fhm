@@ -1,0 +1,266 @@
+title: Home
+tabs:
+  main:
+    display: Icerik
+    sections:
+      -
+        display: Hero Slider
+        fields:
+          -
+            handle: hero_slides
+            field:
+              type: replicator
+              display: Hero Slidelari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Slide Ekle
+              max_sets: 12
+              instructions: Her slide icin gorsel, baslik, aciklama ve CTA ayarlarini girin.
+              sets:
+                slide:
+                  display: Slide
+                  fields:
+                    -
+                      handle: slide_image
+                      field:
+                        type: assets
+                        display: Slide Gorseli
+                        container: assets
+                        max_files: 1
+                        mode: list
+                        instructions: Hero alaninda tam ekran arka plan olarak kullanilir.
+                        replicator_preview: false
+                    -
+                      handle: slide_title
+                      field:
+                        type: text
+                        display: Slide Basligi
+                        validate:
+                          - required
+                        replicator_preview: true
+                    -
+                      handle: slide_text
+                      field:
+                        type: textarea
+                        display: Slide Aciklamasi
+                        replicator_preview: false
+                    -
+                      handle: cta_label
+                      field:
+                        type: text
+                        display: CTA Buton Metni
+                        replicator_preview: false
+                    -
+                      handle: cta_url
+                      field:
+                        type: link
+                        display: CTA Buton Linki
+                        replicator_preview: false
+          -
+            handle: hero_slider_mobile_height
+            field:
+              type: select
+              display: Mobil Slider Yuksekligi
+              default: 36rem
+              clearable: false
+              instructions: 1024px altindaki cihazlar icin slider yuksekligi.
+              options:
+                30rem: Kisa - 480px
+                36rem: Standart - 576px
+                42rem: Buyuk - 672px
+                48rem: Ekstra Buyuk - 768px
+          -
+            handle: hero_slider_desktop_height
+            field:
+              type: select
+              display: Masaustu Slider Yuksekligi
+              default: 46rem
+              clearable: false
+              instructions: 1024px ve uzeri ekranlar icin slider yuksekligi.
+              options:
+                40rem: Kisa - 640px
+                46rem: Standart - 736px
+                52rem: Buyuk - 832px
+                58rem: Ekstra Buyuk - 928px
+      -
+        display: Hakkimizda
+        fields:
+          -
+            handle: about_image
+            field:
+              type: assets
+              display: Hakkimizda Gorseli
+              container: assets
+              max_files: 1
+              mode: list
+              instructions: Hero alaninin altindaki kurumsal tanitim blogunun sol kolonunda kullanilir.
+          -
+            handle: about_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Hakkimizda
+          -
+            handle: about_title
+            field:
+              type: textarea
+              display: Hakkimizda Basligi
+          -
+            handle: about_body
+            field:
+              type: textarea
+              display: Uzun Aciklama
+          -
+            handle: about_button_label
+            field:
+              type: text
+              display: Buton Metni
+          -
+            handle: about_button_url
+            field:
+              type: link
+              display: Buton Linki
+      -
+        display: Hizmetler
+        fields:
+          -
+            handle: services_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Hizmetlerimiz
+          -
+            handle: services_title
+            field:
+              type: textarea
+              display: Hizmetler Basligi
+          -
+            handle: services_link_label
+            field:
+              type: text
+              display: Link Metni
+              default: Tum Liste
+          -
+            handle: services_link_url
+            field:
+              type: link
+              display: Link Adresi
+          -
+            handle: featured_services
+            field:
+              type: entries
+              display: Gosterilecek Hizmet Kartlari
+              collections:
+                - services
+              max_items: 4
+              create: false
+              reorderable: true
+              mode: select
+              instructions: Anasayfada gosterilecek en fazla 4 hizmet kartini sirasiyla secin.
+      -
+        display: Kalite Blogu
+        fields:
+          -
+            handle: quality_image
+            field:
+              type: assets
+              display: Kalite Gorseli
+              container: assets
+              max_files: 1
+              mode: list
+          -
+            handle: quality_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Kalite
+          -
+            handle: quality_title
+            field:
+              type: textarea
+              display: Kalite Basligi
+          -
+            handle: quality_body
+            field:
+              type: textarea
+              display: Kalite Aciklamasi
+          -
+            handle: quality_button_label
+            field:
+              type: text
+              display: Buton Metni
+          -
+            handle: quality_button_url
+            field:
+              type: link
+              display: Buton Linki
+      -
+        display: Neler Yaptik
+        fields:
+          -
+            handle: projects_map_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Neler Yaptik
+          -
+            handle: projects_map_title
+            field:
+              type: textarea
+              display: Harita Basligi
+          -
+            handle: projects_map_link_label
+            field:
+              type: text
+              display: Link Metni
+              default: Tum Liste
+          -
+            handle: projects_map_link_url
+            field:
+              type: link
+              display: Link Adresi
+      -
+        display: Bizden Haberler
+        fields:
+          -
+            handle: news_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Bizden Haberler
+          -
+            handle: news_title
+            field:
+              type: textarea
+              display: Haberler Basligi
+          -
+            handle: news_link_label
+            field:
+              type: text
+              display: Link Metni
+              default: Tum Haberler
+          -
+            handle: news_link_url
+            field:
+              type: link
+              display: Link Adresi
+      -
+        display: Alt Icerik
+        fields:
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Alt Icerik
+  sidebar:
+    display: Ayarlar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              default: home

@@ -1,0 +1,27 @@
+<div class="inner-page-widgets{{ if hide_sidebar_widgets_on_mobile }} inner-page-widgets-mobile-hidden{{ /if }}">
+    {{ if sidebar_widget_mode != "replace" }}
+        {{ if widget_scope == "page" }}
+            {{ inner_page_settings:page_default_widgets }}
+                {{ partial:partials/inner-page-widget }}
+            {{ /inner_page_settings:page_default_widgets }}
+        {{ elseif widget_scope == "blog" }}
+            {{ inner_page_settings:blog_default_widgets }}
+                {{ partial:partials/inner-page-widget }}
+            {{ /inner_page_settings:blog_default_widgets }}
+        {{ elseif widget_scope == "project" }}
+            {{ inner_page_settings:project_default_widgets }}
+                {{ partial:partials/inner-page-widget }}
+            {{ /inner_page_settings:project_default_widgets }}
+        {{ elseif widget_scope == "service" }}
+            {{ inner_page_settings:service_default_widgets }}
+                {{ partial:partials/inner-page-widget }}
+            {{ /inner_page_settings:service_default_widgets }}
+        {{ /if }}
+    {{ /if }}
+
+    {{ if sidebar_widget_mode == "append" || sidebar_widget_mode == "replace" }}
+        {{ sidebar_widgets }}
+            {{ partial:partials/inner-page-widget }}
+        {{ /sidebar_widgets }}
+    {{ /if }}
+</div>

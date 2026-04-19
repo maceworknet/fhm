@@ -1,0 +1,41 @@
+<article class="blog-list-card" data-reveal>
+    <a href="{{ url }}" class="blog-list-card-link">
+        <div class="blog-list-card-media">
+            {{ if featured_image }}
+                {{ featured_image }}
+                    <img
+                        src="{{ url }}"
+                        alt="{{ alt ?? title }}"
+                        class="blog-list-card-image"
+                        draggable="false"
+                    >
+                {{ /featured_image }}
+            {{ else }}
+                <div class="blog-list-card-placeholder">
+                    <span>{{ title }}</span>
+                </div>
+            {{ /if }}
+        </div>
+
+        <div class="blog-list-card-body">
+            <h2 class="blog-list-card-title">{{ title }}</h2>
+
+            {{ if published_on }}
+                <p class="blog-list-card-date">{{ published_on format="d.m.Y" }}</p>
+            {{ /if }}
+
+            <span class="blog-list-card-cta">
+                <span>Haberin Devami</span>
+                <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <path
+                        d="M5 16h22M19 8l8 8-8 8"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </span>
+        </div>
+    </a>
+</article>

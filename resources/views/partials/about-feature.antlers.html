@@ -1,0 +1,63 @@
+<section class="section-space about-feature-section">
+    <div class="shell about-feature-shell">
+        <article class="about-feature-panel" data-reveal>
+            <div class="about-feature-grid">
+                <div class="about-feature-media">
+                    {{ if about_image }}
+                        {{ about_image }}
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt ?? about_title ?? site_settings:company_name }}"
+                                class="about-feature-image"
+                            >
+                        {{ /about_image }}
+                    {{ else }}
+                        <div class="about-feature-placeholder">
+                            <span>{{ site_settings:company_name }}</span>
+                        </div>
+                    {{ /if }}
+                </div>
+
+                <div class="about-feature-copy">
+                    <span class="about-feature-label">
+                        {{ if about_label }}
+                            {{ about_label }}
+                        {{ else }}
+                            Hakkimizda
+                        {{ /if }}
+                    </span>
+
+                    {{ if about_title }}
+                        <h2 class="about-feature-title">{{ about_title }}</h2>
+                    {{ /if }}
+
+                    {{ if about_body }}
+                        <div class="about-feature-body">
+                            <p>{{ about_body }}</p>
+                        </div>
+                    {{ /if }}
+
+                    {{ if about_button_label }}
+                        {{ if about_button_url }}
+                            <div class="about-feature-actions">
+                                <a href="{{ about_button_url }}" class="about-feature-link">
+                                    <span>{{ about_button_label }}</span>
+                                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                        <path
+                                            d="M6 16h20M18 8l8 8-8 8"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </a>
+                                <span class="about-feature-rule" aria-hidden="true"></span>
+                            </div>
+                        {{ /if }}
+                    {{ /if }}
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

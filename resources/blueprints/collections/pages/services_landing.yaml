@@ -1,0 +1,64 @@
+title: Services Landing
+tabs:
+  main:
+    display: Icerik
+    sections:
+      -
+        display: Hizmetler Bolumu
+        fields:
+          -
+            handle: services_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Hizmetlerimiz
+          -
+            handle: services_title
+            field:
+              type: textarea
+              display: Alan Basligi
+          -
+            handle: featured_services
+            field:
+              type: entries
+              display: Gosterilecek Hizmet Kartlari
+              collections:
+                - services
+              create: false
+              reorderable: true
+              mode: select
+              instructions: Bos birakilirsa tum hizmetler listelenir.
+      -
+        display: Logo Showcase
+        fields:
+          -
+            handle: logo_showcase_label
+            field:
+              type: text
+              display: Alan Etiketi
+              default: Cozum Ortaklari
+          -
+            handle: logo_showcase_title
+            field:
+              type: textarea
+              display: Alan Basligi
+          -
+            handle: client_logos
+            field:
+              type: assets
+              display: Musteri Logolari
+              container: assets
+              mode: grid
+              max_files: 24
+              instructions: Logo showcase slider alaninda gosterilecek logolari secin.
+  sidebar:
+    display: Ayarlar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              default: services/index

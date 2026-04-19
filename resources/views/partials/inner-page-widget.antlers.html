@@ -1,0 +1,79 @@
+{{ if type == "content_navigation" }}
+    <section class="inner-page-widget" data-inner-page-nav-widget hidden>
+        <div class="inner-page-widget-head">
+            <span class="inner-page-widget-title">{{ widget_title ?? "Icerik Navigasyonu" }}</span>
+        </div>
+        <ol class="inner-page-toc-list" data-inner-page-nav-list></ol>
+    </section>
+{{ elseif type == "latest_news" }}
+    <section class="inner-page-widget">
+        <div class="inner-page-widget-head">
+            <span class="inner-page-widget-title">{{ widget_title ?? "Son Eklenen Haberler" }}</span>
+        </div>
+        <div class="inner-page-widget-list">
+            {{ collection:blog sort="published_on:desc" limit="{post_limit}" }}
+                <a href="{{ url }}" class="inner-page-widget-link">
+                    <span class="inner-page-widget-link-title">{{ title }}</span>
+                    {{ if published_on }}
+                        <span class="inner-page-widget-link-meta">{{ published_on format="d.m.Y" }}</span>
+                    {{ /if }}
+                </a>
+            {{ /collection:blog }}
+        </div>
+    </section>
+{{ elseif type == "menu" }}
+    {{ if navigation }}
+        <section class="inner-page-widget">
+            <div class="inner-page-widget-head">
+                <span class="inner-page-widget-title">{{ widget_title ?? "Menu" }}</span>
+            </div>
+            <div class="inner-page-widget-list">
+                {{ nav :handle="navigation" }}
+                    <a href="{{ url }}" class="inner-page-widget-link">
+                        <span class="inner-page-widget-link-title">{{ title }}</span>
+                    </a>
+                {{ /nav }}
+            </div>
+        </section>
+    {{ /if }}
+{{ elseif type == "project_details" }}
+    {{ if project_type || project_category || project_sector || completion_year || project_location }}
+        <section class="inner-page-widget">
+            <div class="inner-page-widget-head">
+                <span class="inner-page-widget-title">{{ widget_title ?? "Proje Detaylari" }}</span>
+            </div>
+            <div class="inner-page-detail-list">
+                {{ if show_project_type && project_type }}
+                    <div class="inner-page-detail-row">
+                        <span class="inner-page-detail-label">Is Turu</span>
+                        <span class="inner-page-detail-value">{{ project_type }}</span>
+                    </div>
+                {{ /if }}
+                {{ if show_project_category && project_category }}
+                    <div class="inner-page-detail-row">
+                        <span class="inner-page-detail-label">Kategori</span>
+                        <span class="inner-page-detail-value">{{ project_category }}</span>
+                    </div>
+                {{ /if }}
+                {{ if show_project_sector && project_sector }}
+                    <div class="inner-page-detail-row">
+                        <span class="inner-page-detail-label">Sektor</span>
+                        <span class="inner-page-detail-value">{{ project_sector }}</span>
+                    </div>
+                {{ /if }}
+                {{ if show_completion_year && completion_year }}
+                    <div class="inner-page-detail-row">
+                        <span class="inner-page-detail-label">Tamamlanma Yili</span>
+                        <span class="inner-page-detail-value">{{ completion_year }}</span>
+                    </div>
+                {{ /if }}
+                {{ if show_project_location && project_location }}
+                    <div class="inner-page-detail-row">
+                        <span class="inner-page-detail-label">Sehir</span>
+                        <span class="inner-page-detail-value">{{ project_location }}</span>
+                    </div>
+                {{ /if }}
+            </div>
+        </section>
+    {{ /if }}
+{{ /if }}

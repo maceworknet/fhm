@@ -1,0 +1,64 @@
+<section class="contact-page-section section-space">
+    <div class="shell">
+        <div class="services-page-head contact-page-head" data-reveal>
+            {{ if hero_kicker }}
+                <span class="services-page-label">{{ hero_kicker }}</span>
+            {{ /if }}
+            {{ if hero_title }}
+                <h1 class="services-page-title contact-page-title">{{ hero_title }}</h1>
+            {{ /if }}
+            {{ if hero_text }}
+                <p class="contact-page-copy">{{ hero_text }}</p>
+            {{ /if }}
+        </div>
+
+        <div class="contact-page-layout">
+            <div class="contact-page-main stack gap-6">
+                {{ partial:partials/contact-block }}
+
+                {{ if content }}
+                    <article class="contact-page-article prose-wrapper" data-reveal>
+                        {{ content }}
+                    </article>
+                {{ /if }}
+            </div>
+
+            <aside class="contact-page-sidebar">
+                <div class="contact-page-note" data-reveal>
+                    <span class="eyebrow">Iletisim Notu</span>
+                    {{ if contact_note_title }}
+                        <h2 class="contact-page-note-title">{{ contact_note_title }}</h2>
+                    {{ /if }}
+                    {{ if contact_note_text }}
+                        <p class="contact-page-note-text">{{ contact_note_text }}</p>
+                    {{ /if }}
+
+                    <div class="contact-page-note-stack">
+                        {{ if contact_settings:phone_display && contact_settings:phone_link }}
+                            <a href="{{ contact_settings:phone_link }}" class="contact-page-note-link">
+                                <span class="contact-page-note-link-label">Telefon</span>
+                                <span class="contact-page-note-link-value">{{ contact_settings:phone_display }}</span>
+                            </a>
+                        {{ /if }}
+
+                        {{ if contact_settings:email && contact_settings:email_link }}
+                            <a href="{{ contact_settings:email_link }}" class="contact-page-note-link">
+                                <span class="contact-page-note-link-label">E-posta</span>
+                                <span class="contact-page-note-link-value">{{ contact_settings:email }}</span>
+                            </a>
+                        {{ /if }}
+                    </div>
+
+                    <div class="contact-page-actions">
+                        {{ if contact_settings:whatsapp_url }}
+                            <a href="{{ contact_settings:whatsapp_url }}" class="contact-page-action contact-page-action-primary">WhatsApp ile Yazin</a>
+                        {{ /if }}
+                        {{ if contact_settings:email_link }}
+                            <a href="{{ contact_settings:email_link }}" class="contact-page-action">E-posta Gonderin</a>
+                        {{ /if }}
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

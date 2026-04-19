@@ -1,0 +1,102 @@
+title: Site Settings
+tabs:
+  main:
+    display: Genel
+    sections:
+      -
+        display: Marka
+        fields:
+          -
+            handle: company_name
+            field:
+              type: text
+              display: Şirket Adı
+          -
+            handle: company_tagline
+            field:
+              type: text
+              display: Kısa Tanım
+          -
+            handle: company_summary
+            field:
+              type: textarea
+              display: Genel Açıklama
+          -
+            handle: footer_summary
+            field:
+              type: textarea
+              display: Footer Açıklaması
+          -
+            handle: logo
+            field:
+              type: assets
+              display: Varsayılan Logo
+              container: assets
+              max_files: 1
+              mode: list
+              instructions: Header veya footer için özel logo seçilmezse kullanılacak varsayılan görsel.
+          -
+            handle: favicon
+            field:
+              type: assets
+              display: Favicon
+              container: assets
+              max_files: 1
+              mode: list
+              instructions: Tarayıcı sekmesinde kullanılacak favicon dosyası.
+      -
+        display: İstatistikler
+        fields:
+          -
+            handle: stat_one_value
+            field:
+              type: text
+              display: 1. Değer
+          -
+            handle: stat_one_label
+            field:
+              type: text
+              display: 1. Açıklama
+          -
+            handle: stat_two_value
+            field:
+              type: text
+              display: 2. Değer
+          -
+            handle: stat_two_label
+            field:
+              type: text
+              display: 2. Açıklama
+          -
+            handle: stat_three_value
+            field:
+              type: text
+              display: 3. Değer
+          -
+            handle: stat_three_label
+            field:
+              type: text
+              display: 3. Açıklama
+          -
+            handle: stat_four_value
+            field:
+              type: text
+              display: 4. Değer
+          -
+            handle: stat_four_label
+            field:
+              type: text
+              display: 4. Açıklama
+      -
+        display: Sosyal Linkler
+        fields:
+          -
+            handle: linkedin_url
+            field:
+              type: text
+              display: LinkedIn URL
+          -
+            handle: instagram_url
+            field:
+              type: text
+              display: Instagram URL

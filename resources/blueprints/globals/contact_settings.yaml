@@ -1,0 +1,42 @@
+title: Contact Settings
+tabs:
+  main:
+    display: İletişim
+    sections:
+      -
+        fields:
+          -
+            handle: phone_display
+            field:
+              type: text
+              display: Telefon Metni
+          -
+            handle: phone_link
+            field:
+              type: text
+              display: Telefon Linki
+          -
+            handle: email
+            field:
+              type: text
+              display: E-posta Metni
+          -
+            handle: email_link
+            field:
+              type: text
+              display: E-posta Linki
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Adres
+          -
+            handle: working_hours
+            field:
+              type: text
+              display: Çalışma Saatleri
+          -
+            handle: whatsapp_url
+            field:
+              type: text
+              display: WhatsApp URL

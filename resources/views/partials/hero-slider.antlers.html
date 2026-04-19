@@ -1,0 +1,114 @@
+{{ if hero_slides }}
+    <section
+        class="hero-slider-shell"
+        data-hero-slider
+        aria-roledescription="carousel"
+        tabindex="0"
+        style="--hero-slider-mobile-height: {{ hero_slider_mobile_height ?? '36rem' }}; --hero-slider-desktop-height: {{ hero_slider_desktop_height ?? '46rem' }};"
+    >
+        <div class="hero-slider-stage">
+            {{ hero_slides }}
+                <article
+                    class="hero-slide{{ if first }} is-active{{ /if }}"
+                    data-hero-slide
+                    data-slide-index="{{ index }}"
+                    aria-hidden="{{ if first }}false{{ else }}true{{ /if }}"
+                >
+                    <div class="hero-slide-media" aria-hidden="true">
+                        {{ if slide_image }}
+                            {{ slide_image }}
+                                <img
+                                    src="{{ url }}"
+                                    alt="{{ alt ?? slide_title }}"
+                                    class="hero-slide-image"
+                                >
+                            {{ /slide_image }}
+                        {{ else }}
+                            <div class="hero-slide-placeholder">
+                                <span class="hero-slide-panel hero-slide-panel-main"></span>
+                                <span class="hero-slide-panel hero-slide-panel-side"></span>
+                                <span class="hero-slide-panel hero-slide-panel-rail"></span>
+                            </div>
+                        {{ /if }}
+                    </div>
+
+                    <div class="hero-slide-shade" aria-hidden="true"></div>
+
+                    <div class="shell hero-slide-layout">
+                        <div class="hero-slide-copy">
+                            <h1 class="hero-slide-title">{{ slide_title }}</h1>
+                            <span class="hero-slide-divider"></span>
+
+                            {{ if slide_text }}
+                                <p class="hero-slide-text">{{ slide_text }}</p>
+                            {{ /if }}
+
+                            {{ if cta_label }}
+                                {{ if cta_url }}
+                                    <a href="{{ cta_url }}" class="hero-slide-cta">
+                                        <span>{{ cta_label }}</span>
+                                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path
+                                                d="M5 12h14M13 6l6 6-6 6"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </a>
+                                {{ /if }}
+                            {{ /if }}
+                        </div>
+                    </div>
+                </article>
+            {{ /hero_slides }}
+
+            <div class="hero-slider-bottom">
+                <div class="shell hero-slider-controls">
+                    <div class="hero-slider-tabs" role="tablist" aria-label="Hero slide secimi" lang="tr">
+                        {{ hero_slides }}
+                            <button
+                                type="button"
+                                class="hero-slider-tab{{ if first }} is-active{{ /if }}"
+                                data-hero-trigger
+                                data-slide-target="{{ index }}"
+                                aria-pressed="{{ if first }}true{{ else }}false{{ /if }}"
+                            >
+                                <span class="hero-slider-tab-index">{{ count }}</span>
+                                <span class="hero-slider-tab-title" lang="tr">{{ slide_title }}</span>
+                            </button>
+                        {{ /hero_slides }}
+                    </div>
+
+                    <div class="hero-slider-arrows">
+                        <button type="button" class="hero-slider-arrow" data-hero-prev aria-label="Onceki slide">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path
+                                    d="M19 12H5M11 18l-6-6 6-6"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <button type="button" class="hero-slider-arrow" data-hero-next aria-label="Sonraki slide">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path
+                                    d="M5 12h14M13 6l6 6-6 6"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ else }}
+    {{ partial:partials/hero }}
+{{ /if }}

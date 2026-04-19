@@ -1,0 +1,31 @@
+name: 'FHM Group'
+super: true
+id: 3afb616b-0f98-437d-ae05-8635c28c43ab
+password_hash: $2y$12$v9D6QCUCaegdlnxf1fML6O3TfDUUXhpYm5hwwPQyKDlENCrfeJSIS
+preferences:
+  locale: tr
+  theme:
+    id: 14
+    name: Appart
+    colors:
+      danger: '#a90a23'
+      body-bg: '#eedeca'
+      primary: '#314a4e'
+      success: '#00a969'
+      switch-bg: '#00a969'
+      content-bg: '#fffdf5'
+      progress-bar: '#a90a23'
+      ui-accent-bg: '#005398'
+      focus-outline: '#005398'
+      ui-accent-text: '#005398'
+      global-header-bg: '#1b1c1f'
+      dark-body-bg: '#1b1c1f'
+      dark-content-bg: '#141414'
+  color_mode: light
+  collections:
+    pages:
+      view: tree
+    blog:
+      view: list
+    services:
+      view: list

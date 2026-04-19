@@ -1,0 +1,48 @@
+<section class="section-space news-showcase-section">
+    <div class="shell news-showcase-shell">
+        <div class="services-showcase-head news-showcase-head" data-reveal>
+            <div class="services-showcase-copy">
+                <span class="services-showcase-label">{{ news_label ?? "Bizden Haberler" }}</span>
+                <h2 class="services-showcase-title news-showcase-title">{{ news_title ?? "Sahadan, koordinasyondan ve teslim disiplininden guncel notlar." }}</h2>
+            </div>
+
+            {{ if news_link_label && news_link_url }}
+                <a href="{{ news_link_url }}" class="about-feature-link services-showcase-link services-showcase-link-desktop">
+                    <span>{{ news_link_label }}</span>
+                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path
+                            d="M5 16h22M19 8l8 8-8 8"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+            {{ /if }}
+        </div>
+
+        <div class="news-showcase-grid">
+            {{ collection:blog limit="4" sort="published_on:desc" }}
+                {{ partial:partials/news-showcase-card }}
+            {{ /collection:blog }}
+        </div>
+
+        {{ if news_link_label && news_link_url }}
+            <div class="services-showcase-mobile-action" data-reveal>
+                <a href="{{ news_link_url }}" class="about-feature-link services-showcase-link services-showcase-link-mobile">
+                    <span>{{ news_link_label }}</span>
+                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path
+                            d="M5 16h22M19 8l8 8-8 8"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+            </div>
+        {{ /if }}
+    </div>
+</section>

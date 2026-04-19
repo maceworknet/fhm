@@ -1,0 +1,10 @@
+logo_dark: sfhmlogo.png
+navigation: main
+contact_link: /iletisim
+phone_display: '+90 216 555 01 01'
+phone_link: 'tel:+902165550101'
+social_links:
+  -
+    id: LVfTu6DaglVSbuJGoPByh
+    platform: instagram
+    url: 'https://www.instagram.com/fhmgroup/'

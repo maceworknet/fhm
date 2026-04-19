@@ -1,0 +1,63 @@
+<section class="section-space about-feature-section">
+    <div class="shell about-feature-shell">
+        <article class="about-feature-panel" data-reveal>
+            <div class="about-feature-grid about-feature-grid-reversed">
+                <div class="about-feature-copy">
+                    <span class="about-feature-label">
+                        {{ if quality_label }}
+                            {{ quality_label }}
+                        {{ else }}
+                            Kalite
+                        {{ /if }}
+                    </span>
+
+                    {{ if quality_title }}
+                        <h2 class="about-feature-title">{{ quality_title }}</h2>
+                    {{ /if }}
+
+                    {{ if quality_body }}
+                        <div class="about-feature-body">
+                            <p>{{ quality_body }}</p>
+                        </div>
+                    {{ /if }}
+
+                    {{ if quality_button_label }}
+                        {{ if quality_button_url }}
+                            <div class="about-feature-actions">
+                                <a href="{{ quality_button_url }}" class="about-feature-link">
+                                    <span>{{ quality_button_label }}</span>
+                                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                                        <path
+                                            d="M6 16h20M18 8l8 8-8 8"
+                                            stroke="currentColor"
+                                            stroke-width="1.8"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </a>
+                                <span class="about-feature-rule" aria-hidden="true"></span>
+                            </div>
+                        {{ /if }}
+                    {{ /if }}
+                </div>
+
+                <div class="about-feature-media">
+                    {{ if quality_image }}
+                        {{ quality_image }}
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt ?? quality_title ?? site_settings:company_name }}"
+                                class="about-feature-image"
+                            >
+                        {{ /quality_image }}
+                    {{ else }}
+                        <div class="about-feature-placeholder">
+                            <span>{{ site_settings:company_name }}</span>
+                        </div>
+                    {{ /if }}
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

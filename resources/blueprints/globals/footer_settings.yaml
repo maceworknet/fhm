@@ -1,0 +1,158 @@
+title: Footer Settings
+tabs:
+  main:
+    display: Footer
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: logo_light
+            field:
+              type: assets
+              display: Acik Logo
+              container: assets
+              max_files: 1
+              mode: list
+          -
+            handle: logo_dark
+            field:
+              type: assets
+              display: Koyu Logo
+              container: assets
+              max_files: 1
+              mode: list
+      -
+        display: Marka
+        fields:
+          -
+            handle: brand_name
+            field:
+              type: text
+              display: Marka Adi
+          -
+            handle: brand_tagline
+            field:
+              type: text
+              display: Marka Alt Basligi
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: Footer Ozeti
+          -
+            handle: copyright_text
+            field:
+              type: text
+              display: Copyright Metni
+              instructions: Bos birakilirsa sirket adi ile otomatik olusturulur.
+      -
+        display: Navigasyon
+        fields:
+          -
+            handle: navigation
+            field:
+              type: navs
+              display: Navigasyon
+              max_items: 1
+          -
+            handle: navigation_heading
+            field:
+              type: text
+              display: Navigasyon Basligi
+              default: Sayfalar
+              width: 33
+          -
+            handle: services_heading
+            field:
+              type: text
+              display: Hizmetler Basligi
+              default: Hizmetler
+              width: 33
+          -
+            handle: contact_heading
+            field:
+              type: text
+              display: Iletisim Basligi
+              default: Iletisim
+              width: 33
+          -
+            handle: show_services_links
+            field:
+              type: toggle
+              display: Hizmet Linklerini Goster
+              default: true
+      -
+        display: Iletisim
+        fields:
+          -
+            handle: phone_display
+            field:
+              type: text
+              display: Telefon Metni
+              width: 50
+          -
+            handle: phone_link
+            field:
+              type: text
+              display: Telefon Linki
+              width: 50
+          -
+            handle: email
+            field:
+              type: text
+              display: E-posta Metni
+              width: 50
+          -
+            handle: email_link
+            field:
+              type: text
+              display: E-posta Linki
+              width: 50
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Adres
+          -
+            handle: working_hours
+            field:
+              type: text
+              display: Calisma Saatleri
+          -
+            handle: whatsapp_url
+            field:
+              type: text
+              display: WhatsApp URL
+      -
+        display: Sosyal Medya
+        fields:
+          -
+            handle: social_links
+            field:
+              type: grid
+              display: Sosyal Medya Linkleri
+              mode: stacked
+              add_row: Sosyal Link Ekle
+              fields:
+                -
+                  handle: platform
+                  field:
+                    type: select
+                    display: Platform
+                    options:
+                      instagram: Instagram
+                      linkedin: LinkedIn
+                      facebook: Facebook
+                      youtube: YouTube
+                      x: X
+                      whatsapp: WhatsApp
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: link
+                    display: Link
+                    validate:
+                      - required

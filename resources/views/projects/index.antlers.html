@@ -1,0 +1,27 @@
+<section class="projects-page-section section-space">
+    <div class="shell">
+        <div class="projects-page-head" data-reveal>
+            {{ if hero_kicker }}
+                <span class="projects-page-label">{{ hero_kicker }}</span>
+            {{ /if }}
+
+            <h1 class="projects-page-title">{{ hero_title ?? title }}</h1>
+
+            {{ if hero_text }}
+                <p class="projects-page-copy">{{ hero_text }}</p>
+            {{ /if }}
+        </div>
+
+        <div class="projects-page-grid">
+            {{ collection:projects sort="title:asc" }}
+                {{ partial:partials/project-card }}
+            {{ /collection:projects }}
+        </div>
+
+        {{ if content }}
+            <article class="projects-page-content prose-wrapper" data-reveal>
+                {{ content }}
+            </article>
+        {{ /if }}
+    </div>
+</section>

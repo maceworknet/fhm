@@ -1,0 +1,87 @@
+title: Header Settings
+tabs:
+  main:
+    display: Header
+    sections:
+      -
+        display: Logo
+        fields:
+          -
+            handle: logo_dark
+            field:
+              type: assets
+              display: Koyu Logo
+              container: assets
+              max_files: 1
+              mode: list
+              instructions: Acik header zemini uzerinde kullanilacak ana logo.
+          -
+            handle: logo_light
+            field:
+              type: assets
+              display: Acik Logo
+              container: assets
+              max_files: 1
+              mode: list
+              instructions: Koyu zemin gereken varyasyonlar icin yedek logo.
+      -
+        display: Menu
+        fields:
+          -
+            handle: navigation
+            field:
+              type: navs
+              display: Navigasyon
+              max_items: 1
+              instructions: Header ve mobil sidebar icinde kullanilacak Statamic navigasyonu.
+          -
+            handle: contact_link
+            field:
+              type: link
+              display: Desktop Telefon Ikonu Linki
+              instructions: Masaustunde sag ustteki ikonun yonlenecegi sayfa.
+          -
+            handle: phone_display
+            field:
+              type: text
+              display: Mobil Telefon Metni
+              instructions: Mobilde telefon ikonunun kullanacagi numara. Bos birakilirsa Contact Settings kullanilir.
+          -
+            handle: phone_link
+            field:
+              type: text
+              display: Mobil Telefon Linki
+              instructions: Ornek deger tel:+902165550101. Bos birakilirsa Contact Settings kullanilir.
+      -
+        display: Sosyal Medya
+        fields:
+          -
+            handle: social_links
+            field:
+              type: grid
+              display: Sosyal Medya Linkleri
+              mode: stacked
+              add_row: Sosyal Link Ekle
+              instructions: Mobil sidebar menu altinda gosterilecek ikon linkleri.
+              fields:
+                -
+                  handle: platform
+                  field:
+                    type: select
+                    display: Platform
+                    options:
+                      instagram: Instagram
+                      linkedin: LinkedIn
+                      facebook: Facebook
+                      youtube: YouTube
+                      x: X
+                      whatsapp: WhatsApp
+                    validate:
+                      - required
+                -
+                  handle: url
+                  field:
+                    type: link
+                    display: Link
+                    validate:
+                      - required

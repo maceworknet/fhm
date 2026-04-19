@@ -1,0 +1,22 @@
+:root {
+    --macework-accent: #ff617a;
+}
+
+.white-label-logo {
+    width: auto;
+    max-width: 240px;
+    max-height: 1.75rem;
+}
+
+.macework-cp-nav-logo {
+    width: auto;
+    max-width: 240px;
+    max-height: 1.75rem;
+}
+
+@media (max-width: 640px) {
+    .white-label-logo,
+    .macework-cp-nav-logo {
+        max-width: 180px;
+    }
+}

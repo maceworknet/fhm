@@ -1,0 +1,7 @@
+title: Main Navigation
+collections:
+  - pages
+  - services
+  - projects
+  - blog
+max_depth: 2

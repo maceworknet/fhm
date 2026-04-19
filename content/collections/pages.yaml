@@ -1,0 +1,8 @@
+title: Pages
+template: default
+layout: layout
+structure:
+  root: true
+  max_depth: 2
+route: '{parent_uri}/{slug}'
+propagate: true

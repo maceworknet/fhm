@@ -1,0 +1,40 @@
+<a href="{{ url }}" class="news-showcase-card" data-reveal>
+    <span class="news-showcase-visual" aria-hidden="true">
+        {{ if featured_image }}
+            {{ featured_image }}
+                <img src="{{ url }}" alt="" class="news-showcase-image">
+            {{ /featured_image }}
+        {{ /if }}
+        <span class="news-showcase-shade"></span>
+    </span>
+
+    <span class="news-showcase-card-top">
+        <span class="blog-meta news-showcase-meta">
+            {{ if published_on }}
+                <span>{{ published_on format="d.m.Y" }}</span>
+            {{ /if }}
+        </span>
+
+        <span class="news-showcase-card-title">{{ title }}</span>
+
+        {{ if excerpt }}
+            <span class="news-showcase-card-text">{{ excerpt }}</span>
+        {{ /if }}
+    </span>
+
+    <span class="news-showcase-card-bottom">
+        <span class="news-showcase-read-time">{{ read_time ?? "4 dk" }}</span>
+        <span class="news-showcase-link">
+            <span>Haberi Oku</span>
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <path
+                    d="M5 16h22M19 8l8 8-8 8"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </span>
+    </span>
+</a>

@@ -1,0 +1,37 @@
+page_default_widgets:
+  -
+    id: page-widget-menu
+    type: menu
+    widget_title: Sayfalar
+    navigation: main
+blog_default_widgets:
+  -
+    id: blog-widget-navigation
+    type: content_navigation
+    widget_title: Yazi Basliklari
+  -
+    id: blog-widget-latest
+    type: latest_news
+    widget_title: Son Eklenen Haberler
+    post_limit: 4
+project_default_widgets:
+  -
+    id: project-widget-details
+    type: project_details
+    widget_title: Proje Detaylari
+    show_project_type: true
+    show_project_category: true
+    show_project_sector: true
+    show_completion_year: true
+    show_project_location: true
+  -
+    id: project-widget-latest
+    type: latest_news
+    widget_title: Bizden Haberler
+    post_limit: 3
+service_default_widgets:
+  -
+    id: service-widget-news
+    type: latest_news
+    widget_title: Son Eklenen Haberler
+    post_limit: 3

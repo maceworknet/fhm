@@ -1,0 +1,52 @@
+title: Contact
+tabs:
+  main:
+    display: İçerik
+    sections:
+      -
+        display: Hero
+        fields:
+          -
+            handle: hero_kicker
+            field:
+              type: text
+              display: Hero Etiketi
+          -
+            handle: hero_title
+            field:
+              type: text
+              display: Hero Başlığı
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: Hero Açıklaması
+      -
+        display: İletişim Notu
+        fields:
+          -
+            handle: contact_note_title
+            field:
+              type: text
+              display: Bilgi Kartı Başlığı
+          -
+            handle: contact_note_text
+            field:
+              type: textarea
+              display: Bilgi Kartı Açıklaması
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Sayfa İçeriği
+  sidebar:
+    display: Ayarlar
+    sections:
+      -
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              default: contact

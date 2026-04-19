@@ -1,0 +1,6 @@
+title: Blog
+template: blog/show
+layout: layout
+route: 'blog/{slug}'
+sort_by: published_on
+sort_dir: desc

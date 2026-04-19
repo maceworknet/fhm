@@ -1,0 +1,388 @@
+title: Inner Page Settings
+tabs:
+  main:
+    display: Icerik
+    sections:
+      -
+        display: Standart Sayfalar
+        fields:
+          -
+            handle: page_default_widgets
+            field:
+              type: replicator
+              display: Varsayilan Page Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Icerik Navigasyonu
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Son Eklenen Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 4
+                            width: 50
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Sayfalar
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            width: 50
+                            validate:
+                              - required
+                    project_details:
+                      display: Proje Detaylari
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Proje Detaylari
+                            replicator_preview: true
+                        -
+                          handle: show_project_type
+                          field:
+                            type: toggle
+                            display: Is Turunu Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_category
+                          field:
+                            type: toggle
+                            display: Kategoriyi Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_sector
+                          field:
+                            type: toggle
+                            display: Sektoru Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_completion_year
+                          field:
+                            type: toggle
+                            display: Yili Goster
+                            default: true
+                            width: 50
+                        -
+                          handle: show_project_location
+                          field:
+                            type: toggle
+                            display: Sehir/Lokasyonu Goster
+                            default: true
+                            width: 50
+      -
+        display: Blog Tekil
+        fields:
+          -
+            handle: blog_default_widgets
+            field:
+              type: replicator
+              display: Varsayilan Blog Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Yazi Basliklari
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Son Eklenen Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 4
+                            width: 50
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Menu
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            width: 50
+                            validate:
+                              - required
+      -
+        display: Proje Tekil
+        fields:
+          -
+            handle: project_default_widgets
+            field:
+              type: replicator
+              display: Varsayilan Proje Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Icerik Basliklari
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Bizden Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 3
+                            width: 50
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Menu
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            width: 50
+                            validate:
+                              - required
+                    project_details:
+                      display: Proje Detaylari
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Proje Detaylari
+                            replicator_preview: true
+                        -
+                          handle: show_project_type
+                          field:
+                            type: toggle
+                            display: Is Turunu Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_category
+                          field:
+                            type: toggle
+                            display: Kategoriyi Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_sector
+                          field:
+                            type: toggle
+                            display: Sektoru Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_completion_year
+                          field:
+                            type: toggle
+                            display: Yili Goster
+                            default: true
+                            width: 50
+                        -
+                          handle: show_project_location
+                          field:
+                            type: toggle
+                            display: Sehir/Lokasyonu Goster
+                            default: true
+                            width: 50
+      -
+        display: Hizmet Tekil
+        fields:
+          -
+            handle: service_default_widgets
+            field:
+              type: replicator
+              display: Varsayilan Hizmet Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Icerik Basliklari
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Son Eklenen Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 3
+                            width: 50
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Menu
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            width: 50
+                            validate:
+                              - required
+                    project_details:
+                      display: Proje Detaylari
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Proje Detaylari
+                            replicator_preview: true
+                        -
+                          handle: show_project_type
+                          field:
+                            type: toggle
+                            display: Is Turunu Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_category
+                          field:
+                            type: toggle
+                            display: Kategoriyi Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_sector
+                          field:
+                            type: toggle
+                            display: Sektoru Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_completion_year
+                          field:
+                            type: toggle
+                            display: Yili Goster
+                            default: true
+                            width: 50
+                        -
+                          handle: show_project_location
+                          field:
+                            type: toggle
+                            display: Sehir/Lokasyonu Goster
+                            default: true
+                            width: 50

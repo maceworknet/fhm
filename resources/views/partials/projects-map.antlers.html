@@ -1,0 +1,73 @@
+<section class="section-space projects-map-section">
+    <div class="shell projects-map-shell">
+        <div class="services-showcase-head projects-map-head" data-reveal>
+            <div class="services-showcase-copy">
+                <span class="services-showcase-label">{{ projects_map_label ?? "Neler Yaptik" }}</span>
+                <h2 class="services-showcase-title projects-map-title">{{ projects_map_title ?? "Turkiye capinda portfoyumuzdeki projelerimiz." }}</h2>
+            </div>
+
+            {{ if projects_map_link_label && projects_map_link_url }}
+                <a href="{{ projects_map_link_url }}" class="about-feature-link services-showcase-link services-showcase-link-desktop">
+                    <span>{{ projects_map_link_label }}</span>
+                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path
+                            d="M5 16h22M19 8l8 8-8 8"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+            {{ /if }}
+        </div>
+
+        <div class="projects-map-stage" data-projects-map data-reveal>
+            <div class="projects-map-canvas" data-projects-map-canvas aria-label="{{ projects_map_label ?? 'Proje haritasi' }}"></div>
+
+            <button
+                type="button"
+                class="projects-map-backdrop"
+                data-projects-map-backdrop
+                hidden
+                aria-label="Harita acilir penceresini kapat"
+            ></button>
+
+            <div class="projects-map-popup" data-projects-map-popup hidden>
+                <div class="projects-map-popup-inner">
+                    <span class="projects-map-popup-city" data-projects-map-city></span>
+                    <ul class="projects-map-popup-list" data-projects-map-list></ul>
+                </div>
+            </div>
+
+            <div class="projects-map-empty" data-projects-map-empty hidden>
+                Haritada gosterilecek proje bulunamadi.
+            </div>
+
+            <div class="hidden" data-projects-map-items>
+                {{ collection:projects sort="title:asc" }}
+                    {{ if project_city }}
+                        <a href="{{ url }}" data-project-city="{{ project_city }}">{{ title }}</a>
+                    {{ /if }}
+                {{ /collection:projects }}
+            </div>
+        </div>
+
+        {{ if projects_map_link_label && projects_map_link_url }}
+            <div class="services-showcase-mobile-action" data-reveal>
+                <a href="{{ projects_map_link_url }}" class="about-feature-link services-showcase-link services-showcase-link-mobile">
+                    <span>{{ projects_map_link_label }}</span>
+                    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path
+                            d="M5 16h22M19 8l8 8-8 8"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+            </div>
+        {{ /if }}
+    </div>
+</section>

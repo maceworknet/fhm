@@ -1,0 +1,26 @@
+logo_dark: sfhmlogo.png
+brand_name: 'FHM GROUP'
+brand_tagline: 'Mekanik tesisat ve endustriyel proje uygulamalari'
+summary: 'Kurumsal projelerde mekanik sistemleri daha okunabilir, uygulanabilir ve surdurulebilir hale getiren kurumsal muhendislik ve uygulama partneri.'
+copyright_text: 'Tum haklari saklidir.'
+navigation: footer
+navigation_heading: Sayfalar
+services_heading: Hizmetler
+contact_heading: Iletisim
+show_services_links: true
+phone_display: '+90 216 555 01 01'
+phone_link: 'tel:+902165550101'
+email: info@fhmgroup.com.tr
+email_link: 'mailto:info@fhmgroup.com.tr'
+address: 'Icerenkoy Mah. Atasehir, Istanbul, Turkiye'
+working_hours: 'Hafta ici 08:30 - 18:30'
+whatsapp_url: 'https://wa.me/902165550101'
+social_links:
+  -
+    id: footer-social-1
+    platform: x
+    url: 'https://www.linkedin.com/'
+  -
+    id: footer-social-2
+    platform: instagram
+    url: 'https://www.instagram.com/'

@@ -1,0 +1,42 @@
+title: CTA Settings
+tabs:
+  main:
+    display: CTA
+    sections:
+      -
+        fields:
+          -
+            handle: eyebrow
+            field:
+              type: text
+              display: Üst Etiket
+          -
+            handle: title
+            field:
+              type: text
+              display: Başlık
+          -
+            handle: text
+            field:
+              type: textarea
+              display: Açıklama
+          -
+            handle: primary_label
+            field:
+              type: text
+              display: Ana Buton Etiketi
+          -
+            handle: primary_url
+            field:
+              type: text
+              display: Ana Buton Linki
+          -
+            handle: secondary_label
+            field:
+              type: text
+              display: İkincil Buton Etiketi
+          -
+            handle: secondary_url
+            field:
+              type: text
+              display: İkincil Buton Linki

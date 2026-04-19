@@ -1,0 +1,296 @@
+title: Project
+tabs:
+  main:
+    display: Icerik
+    sections:
+      -
+        display: Proje Ozeti
+        fields:
+          -
+            handle: featured_image
+            field:
+              type: assets
+              display: One Cikan Gorsel
+              container: assets
+              max_files: 1
+              mode: list
+          -
+            handle: project_location
+            field:
+              type: text
+              display: Lokasyon
+              width: 50
+          -
+            handle: project_city
+            field:
+              type: select
+              display: Il
+              clearable: false
+              searchable: true
+              default: istanbul
+              instructions: Harita blogunda kullanilacak ili secin.
+              validate:
+                - required
+              width: 50
+              options:
+                adana: Adana
+                adiyaman: Adiyaman
+                afyon: Afyon
+                agri: Agri
+                aksaray: Aksaray
+                amasya: Amasya
+                ankara: Ankara
+                antalya: Antalya
+                ardahan: Ardahan
+                artvin: Artvin
+                aydin: Aydin
+                balikesir: Balikesir
+                bartin: Bartin
+                batman: Batman
+                bayburt: Bayburt
+                bilecik: Bilecik
+                bingol: Bingol
+                bitlis: Bitlis
+                bolu: Bolu
+                burdur: Burdur
+                bursa: Bursa
+                canakkale: Canakkale
+                cankiri: Cankiri
+                corum: Corum
+                denizli: Denizli
+                diyarbakir: Diyarbakir
+                duzce: Duzce
+                edirne: Edirne
+                elazig: Elazig
+                erzincan: Erzincan
+                erzurum: Erzurum
+                eskisehir: Eskisehir
+                gaziantep: Gaziantep
+                giresun: Giresun
+                gumushane: Gumushane
+                hakkari: Hakkari
+                hatay: Hatay
+                igdir: Igdir
+                isparta: Isparta
+                istanbul: Istanbul
+                izmir: Izmir
+                kahramanmaras: Kahramanmaras
+                karabuk: Karabuk
+                karaman: Karaman
+                kars: Kars
+                kastamonu: Kastamonu
+                kayseri: Kayseri
+                kilis: Kilis
+                kirikkale: Kirikkale
+                kirklareli: Kirklareli
+                kirsehir: Kirsehir
+                kocaeli: Kocaeli
+                konya: Konya
+                kutahya: Kutahya
+                malatya: Malatya
+                manisa: Manisa
+                mardin: Mardin
+                mersin: Mersin
+                mugla: Mugla
+                mus: Mus
+                nevsehir: Nevsehir
+                nigde: Nigde
+                ordu: Ordu
+                osmaniye: Osmaniye
+                rize: Rize
+                sakarya: Sakarya
+                samsun: Samsun
+                sanliurfa: Sanliurfa
+                siirt: Siirt
+                sinop: Sinop
+                sirnak: Sirnak
+                sivas: Sivas
+                tekirdag: Tekirdag
+                tokat: Tokat
+                trabzon: Trabzon
+                tunceli: Tunceli
+                usak: Usak
+                van: Van
+                yalova: Yalova
+                yozgat: Yozgat
+                zonguldak: Zonguldak
+          -
+            handle: project_sector
+            field:
+              type: text
+              display: Sektor
+              width: 50
+          -
+            handle: project_type
+            field:
+              type: text
+              display: Is Turu
+              width: 50
+          -
+            handle: project_category
+            field:
+              type: text
+              display: Kategori
+              width: 50
+          -
+            handle: completion_year
+            field:
+              type: text
+              display: Tamamlanma Yili
+              width: 50
+          -
+            handle: hero_text
+            field:
+              type: textarea
+              display: Kisa Aciklama
+      -
+        display: Sidebar
+        fields:
+          -
+            handle: sidebar_title
+            field:
+              type: text
+              display: Sidebar Basligi
+          -
+            handle: sidebar_excerpt
+            field:
+              type: textarea
+              display: Sidebar Aciklamasi
+          -
+            handle: sidebar_widget_mode
+            field:
+              type: select
+              display: Widget Kullanimi
+              default: inherit
+              clearable: false
+              options:
+                inherit: Varsayilanlari Kullan
+                append: Varsayilanlara Ekle
+                replace: Sadece Bu Projenin Widgetlarini Kullan
+          -
+            handle: hide_sidebar_widgets_on_mobile
+            field:
+              type: toggle
+              display: Widgetlari Mobilde Gizle
+              instructions: Aciksa sidebar widgetlari mobilde gosterilmez, sadece ust ozet alani kalir.
+              default: false
+          -
+            handle: sidebar_widgets
+            field:
+              type: replicator
+              display: Sidebar Widgetlari
+              collapse: accordion
+              previews: true
+              fullscreen: false
+              button_label: Widget Ekle
+              sets:
+                widgets:
+                  display: Widget
+                  sets:
+                    content_navigation:
+                      display: Icerik Navigasyon
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Icerik Navigasyonu
+                            replicator_preview: true
+                    latest_news:
+                      display: Son Eklenen Haberler
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Son Eklenen Haberler
+                            replicator_preview: true
+                        -
+                          handle: post_limit
+                          field:
+                            type: integer
+                            display: Gosterilecek Haber Sayisi
+                            default: 3
+                    menu:
+                      display: Menu
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Menu
+                            replicator_preview: true
+                        -
+                          handle: navigation
+                          field:
+                            type: navs
+                            display: Navigasyon
+                            max_items: 1
+                            validate:
+                              - required
+                    project_details:
+                      display: Proje Detaylari
+                      fields:
+                        -
+                          handle: widget_title
+                          field:
+                            type: text
+                            display: Widget Basligi
+                            default: Proje Detaylari
+                            replicator_preview: true
+                        -
+                          handle: show_project_type
+                          field:
+                            type: toggle
+                            display: Is Turunu Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_category
+                          field:
+                            type: toggle
+                            display: Kategoriyi Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_project_sector
+                          field:
+                            type: toggle
+                            display: Sektoru Goster
+                            default: true
+                            width: 33
+                        -
+                          handle: show_completion_year
+                          field:
+                            type: toggle
+                            display: Yili Goster
+                            default: true
+                            width: 50
+                        -
+                          handle: show_project_location
+                          field:
+                            type: toggle
+                            display: Sehir/Lokasyonu Goster
+                            default: true
+                            width: 50
+      -
+        display: Proje Detayi
+        fields:
+          -
+            handle: project_scope
+            field:
+              type: markdown
+              display: Kapsam
+          -
+            handle: project_results
+            field:
+              type: markdown
+              display: Sonuclar
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Uzun Icerik

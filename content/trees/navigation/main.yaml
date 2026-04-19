@@ -1,0 +1,20 @@
+tree:
+  -
+    id: 84270ab8-b780-4f61-bb04-61e2f9031a6a
+    entry: home
+  -
+    id: f2c20b69-b00f-4629-ba07-42c97189cc41
+    entry: about
+  -
+    id: 57cee0ce-22f4-4361-9436-1d2d9eb52e9d
+    entry: services_page
+  -
+    id: 791baeb5-35e1-43ec-bad9-bdcf3095e079
+    entry: projects_page
+  -
+    id: 70e35f51-8333-4476-ae33-1f918e6de9a3
+    title: Haberler
+    url: 'http://fhmgroup.test/haberler'
+  -
+    id: cc9e7f8a-2249-4519-8e7f-525c9186e2e7
+    entry: contact_page

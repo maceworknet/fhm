@@ -1,0 +1,56 @@
+<section class="inner-page-section">
+    <div class="shell inner-page-grid">
+        <div class="inner-page-media-wrap" data-reveal>
+            <div class="inner-page-media-surface">
+                {{ if featured_image }}
+                    {{ featured_image }}
+                        <img
+                            src="{{ url }}"
+                            alt="{{ alt ?? title }}"
+                            class="inner-page-media-image"
+                        >
+                    {{ /featured_image }}
+                {{ else }}
+                    <div class="inner-page-media-placeholder">
+                        <span>{{ title }}</span>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+
+        <aside class="inner-page-sidebar">
+            <div class="inner-page-sidebar-rail">
+                <section class="inner-page-summary" data-reveal>
+                    <span class="inner-page-summary-line"></span>
+                    <h1 class="inner-page-summary-title">{{ sidebar_title ?? title }}</h1>
+                    {{ if sidebar_excerpt || excerpt }}
+                        <p class="inner-page-summary-text">{{ sidebar_excerpt ?? excerpt }}</p>
+                    {{ /if }}
+                </section>
+
+                {{ partial:partials/inner-page-widgets widget_scope="blog" }}
+            </div>
+        </aside>
+
+        <div class="inner-page-main">
+            {{ partial:partials/breadcrumb parent_title="Blog" parent_url="/blog" }}
+
+            <div class="inner-page-content-stack" data-inner-page-content>
+                <article class="inner-page-article-surface prose-wrapper inner-page-article" data-reveal>
+                    <div class="inner-page-blog-meta not-prose">
+                        {{ if category_label }}
+                            <span>{{ category_label }}</span>
+                        {{ /if }}
+                        {{ if published_on }}
+                            <span>{{ published_on format="d.m.Y" }}</span>
+                        {{ /if }}
+                        {{ if read_time }}
+                            <span>{{ read_time }}</span>
+                        {{ /if }}
+                    </div>
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

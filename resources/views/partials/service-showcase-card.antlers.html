@@ -1,0 +1,39 @@
+<article class="service-showcase-card" data-reveal>
+    <a href="{{ url }}" class="service-showcase-link-card">
+        <div class="service-showcase-media">
+            {{ if service_image }}
+                {{ service_image }}
+                    <img
+                        src="{{ url }}"
+                        alt="{{ alt ?? title }}"
+                        class="service-showcase-image"
+                        draggable="false"
+                    >
+                {{ /service_image }}
+            {{ else }}
+                <div class="service-showcase-placeholder">
+                    <span>{{ title }}</span>
+                </div>
+            {{ /if }}
+
+            <div class="service-showcase-shade"></div>
+            <span class="service-showcase-tag">{{ hero_kicker ?? "Hizmet" }}</span>
+            <span class="service-showcase-arrow" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                    <path
+                        d="M5 16h22M19 8l8 8-8 8"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </span>
+        </div>
+
+        <div class="service-showcase-body">
+            <h3 class="service-showcase-card-title">{{ title }}</h3>
+            <p class="service-showcase-card-text">{{ hero_text }}</p>
+        </div>
+    </a>
+</article>
