@@ -1,28 +1,60 @@
 <section class="contact-page-surface" data-reveal>
     <div class="contact-page-surface-head">
-        <span class="eyebrow">Iletisim Bilgileri</span>
-        <h2 class="contact-page-surface-title">Dogrudan erisilebilir, sade iletisim akisi</h2>
+        <span class="eyebrow">{{ contact_info_eyebrow ?? 'İletişim Bilgileri' }}</span>
+        <h2 class="contact-page-surface-title">{{ contact_info_title ?? 'Dogrudan erisilebilir, sade iletisim akisi' }}</h2>
         <p class="contact-page-surface-copy">
-            Teklif, kesif ve revizyon talepleriniz icin temel proje basliklariyla bize ulasmaniz yeterli. Ilk gorusmede kapsam, lokasyon ve dogru baslangic adimlarini hizlica netlestiriyoruz.
+            {{ contact_info_text ?? 'Teklif, kesif ve revizyon talepleriniz icin temel proje basliklariyla bize ulasmaniz yeterli. Ilk gorusmede kapsam, lokasyon ve dogru baslangic adimlarini hizlica netlestiriyoruz.' }}
         </p>
     </div>
 
     <div class="contact-page-grid">
         <article class="contact-page-card">
             <span class="contact-page-card-label">Telefon</span>
-            <a href="{{ contact_settings:phone_link }}" class="contact-page-card-link">{{ contact_settings:phone_display }}</a>
+            <div class="flex flex-col gap-2">
+                {{ if phones }}
+                    {{ phones }}
+                        <a href="{{ phone_link }}" class="contact-page-card-link">{{ phone_display }}</a>
+                    {{ /phones }}
+                {{ else }}
+                    <a href="{{ contact_settings:phone_link }}" class="contact-page-card-link">{{ contact_settings:phone_display }}</a>
+                {{ /if }}
+            </div>
         </article>
         <article class="contact-page-card">
             <span class="contact-page-card-label">E-posta</span>
-            <a href="{{ contact_settings:email_link }}" class="contact-page-card-link">{{ contact_settings:email }}</a>
+            <div class="flex flex-col gap-2">
+                {{ if emails }}
+                    {{ emails }}
+                        <a href="{{ email_link }}" class="contact-page-card-link">{{ email }}</a>
+                    {{ /emails }}
+                {{ else }}
+                    <a href="{{ contact_settings:email_link }}" class="contact-page-card-link">{{ contact_settings:email }}</a>
+                {{ /if }}
+            </div>
         </article>
         <article class="contact-page-card">
             <span class="contact-page-card-label">Adres</span>
-            <p class="contact-page-card-text">{{ contact_settings:address }}</p>
+            <div class="flex flex-col gap-2">
+                {{ if addresses }}
+                    {{ addresses }}
+                        <p class="contact-page-card-text">{{ address }}</p>
+                    {{ /addresses }}
+                {{ else }}
+                    <p class="contact-page-card-text">{{ contact_settings:address }}</p>
+                {{ /if }}
+            </div>
         </article>
         <article class="contact-page-card">
             <span class="contact-page-card-label">Calisma Saatleri</span>
-            <p class="contact-page-card-text">{{ contact_settings:working_hours }}</p>
+            <div class="flex flex-col gap-2">
+                {{ if working_hours_list }}
+                    {{ working_hours_list }}
+                        <p class="contact-page-card-text">{{ working_hours }}</p>
+                    {{ /working_hours_list }}
+                {{ else }}
+                    <p class="contact-page-card-text">{{ contact_settings:working_hours }}</p>
+                {{ /if }}
+            </div>
         </article>
     </div>
 </section>

@@ -39,6 +39,82 @@ tabs:
             field:
               type: markdown
               display: Sayfa İçeriği
+      -
+        display: İletişim Bilgileri (Kartlar)
+        fields:
+          -
+            handle: contact_info_eyebrow
+            field:
+              type: text
+              display: Kartlar Üst Etiketi (Eyebrow)
+              default: "İletişim Bilgileri"
+          -
+            handle: contact_info_title
+            field:
+              type: text
+              display: Kartlar Başlığı
+              default: "Dogrudan erisilebilir, sade iletisim akisi"
+          -
+            handle: contact_info_text
+            field:
+              type: textarea
+              display: Kartlar Açıklaması
+              default: "Teklif, kesif ve revizyon talepleriniz icin temel proje basliklariyla bize ulasmaniz yeterli. Ilk gorusmede kapsam, lokasyon ve dogru baslangic adimlarini hizlica netlestiriyoruz."
+          -
+            handle: phones
+            field:
+              type: grid
+              display: Telefon Numaraları
+              fields:
+                -
+                  handle: phone_display
+                  field:
+                    type: text
+                    display: Telefon Metni
+                -
+                  handle: phone_link
+                  field:
+                    type: text
+                    display: Telefon Linki
+          -
+            handle: emails
+            field:
+              type: grid
+              display: E-posta Adresleri
+              fields:
+                -
+                  handle: email
+                  field:
+                    type: text
+                    display: E-posta Metni
+                -
+                  handle: email_link
+                  field:
+                    type: text
+                    display: E-posta Linki
+          -
+            handle: addresses
+            field:
+              type: grid
+              display: Adresler
+              fields:
+                -
+                  handle: address
+                  field:
+                    type: textarea
+                    display: Adres Metni
+          -
+            handle: working_hours_list
+            field:
+              type: grid
+              display: Çalışma Saatleri
+              fields:
+                -
+                  handle: working_hours
+                  field:
+                    type: text
+                    display: Çalışma Saati Metni
+
   sidebar:
     display: Ayarlar
     sections:
