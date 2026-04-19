@@ -45,31 +45,31 @@
             <div class="inner-page-detail-list">
                 {{ if show_project_type && project_type }}
                     <div class="inner-page-detail-row">
-                        <span class="inner-page-detail-label">Is Turu</span>
+                        <span class="inner-page-detail-label">{{ inner_page_settings:label_project_type ?? 'İş Türü' }}</span>
                         <span class="inner-page-detail-value">{{ project_type }}</span>
                     </div>
                 {{ /if }}
                 {{ if show_project_category && project_category }}
                     <div class="inner-page-detail-row">
-                        <span class="inner-page-detail-label">Kategori</span>
+                        <span class="inner-page-detail-label">{{ inner_page_settings:label_project_category ?? 'Kategori' }}</span>
                         <span class="inner-page-detail-value">{{ project_category }}</span>
                     </div>
                 {{ /if }}
                 {{ if show_project_sector && project_sector }}
                     <div class="inner-page-detail-row">
-                        <span class="inner-page-detail-label">Sektor</span>
+                        <span class="inner-page-detail-label">{{ inner_page_settings:label_project_sector ?? 'Sektör' }}</span>
                         <span class="inner-page-detail-value">{{ project_sector }}</span>
                     </div>
                 {{ /if }}
                 {{ if show_completion_year && completion_year }}
                     <div class="inner-page-detail-row">
-                        <span class="inner-page-detail-label">Tamamlanma Yili</span>
+                        <span class="inner-page-detail-label">{{ inner_page_settings:label_completion_year ?? 'Tamamlanma Yılı' }}</span>
                         <span class="inner-page-detail-value">{{ completion_year }}</span>
                     </div>
                 {{ /if }}
                 {{ if show_project_location && project_location }}
                     <div class="inner-page-detail-row">
-                        <span class="inner-page-detail-label">Sehir</span>
+                        <span class="inner-page-detail-label">{{ inner_page_settings:label_project_location ?? 'Şehir' }}</span>
                         <span class="inner-page-detail-value">{{ project_location }}</span>
                     </div>
                 {{ /if }}

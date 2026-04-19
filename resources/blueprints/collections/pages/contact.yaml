@@ -25,6 +25,12 @@ tabs:
         display: İletişim Notu
         fields:
           -
+            handle: contact_note_eyebrow
+            field:
+              type: text
+              display: Bilgi Kartı Üst Etiketi (Eyebrow)
+              default: "İletişim Notu"
+          -
             handle: contact_note_title
             field:
               type: text
@@ -34,6 +40,34 @@ tabs:
             field:
               type: textarea
               display: Bilgi Kartı Açıklaması
+          -
+            handle: contact_note_phone_label
+            field:
+              type: text
+              display: Telefon Etiketi
+              default: "Telefon"
+              width: 50
+          -
+            handle: contact_note_email_label
+            field:
+              type: text
+              display: E-posta Etiketi
+              default: "E-posta"
+              width: 50
+          -
+            handle: contact_note_whatsapp_button
+            field:
+              type: text
+              display: WhatsApp Buton Metni
+              default: "WhatsApp ile Yazın"
+              width: 50
+          -
+            handle: contact_note_email_button
+            field:
+              type: text
+              display: E-posta Buton Metni
+              default: "E-posta Gönderin"
+              width: 50
           -
             handle: content
             field:

@@ -12,9 +12,8 @@ tree:
     id: 791baeb5-35e1-43ec-bad9-bdcf3095e079
     entry: projects_page
   -
-    id: 70e35f51-8333-4476-ae33-1f918e6de9a3
-    title: Haberler
-    url: 'http://fhmgroup.test/haberler'
+    id: 06026a73-cfa8-4c6d-a435-4e31d8ef380e
+    entry: blog_page
   -
     id: cc9e7f8a-2249-4519-8e7f-525c9186e2e7
     entry: contact_page

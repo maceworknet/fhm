@@ -29,3 +29,8 @@ preferences:
       view: list
     services:
       view: list
+    projects:
+      view: list
+  assets:
+    assets:
+      mode: grid

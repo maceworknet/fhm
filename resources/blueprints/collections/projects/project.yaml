@@ -4,16 +4,22 @@ tabs:
     display: Icerik
     sections:
       -
-        display: Proje Ozeti
+        display: 'Proje Ozeti'
         fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
           -
             handle: featured_image
             field:
               type: assets
-              display: One Cikan Gorsel
+              display: 'One Cikan Gorsel'
               container: assets
               max_files: 1
-              mode: list
           -
             handle: project_location
             field:
@@ -25,10 +31,8 @@ tabs:
             field:
               type: select
               display: Il
-              clearable: false
-              searchable: true
               default: istanbul
-              instructions: Harita blogunda kullanilacak ili secin.
+              instructions: 'Harita blogunda kullanilacak ili secin.'
               validate:
                 - required
               width: 50
@@ -121,12 +125,6 @@ tabs:
               display: Sektor
               width: 50
           -
-            handle: project_type
-            field:
-              type: text
-              display: Is Turu
-              width: 50
-          -
             handle: project_category
             field:
               type: text
@@ -136,82 +134,69 @@ tabs:
             handle: completion_year
             field:
               type: text
-              display: Tamamlanma Yili
+              display: 'Tamamlanma Yili'
               width: 50
           -
             handle: hero_text
             field:
               type: textarea
-              display: Kisa Aciklama
+              display: 'Kisa Aciklama'
       -
         display: Sidebar
         fields:
           -
-            handle: sidebar_title
-            field:
-              type: text
-              display: Sidebar Basligi
-          -
-            handle: sidebar_excerpt
-            field:
-              type: textarea
-              display: Sidebar Aciklamasi
-          -
             handle: sidebar_widget_mode
             field:
               type: select
-              display: Widget Kullanimi
+              display: 'Widget Kullanimi'
               default: inherit
-              clearable: false
               options:
-                inherit: Varsayilanlari Kullan
-                append: Varsayilanlara Ekle
-                replace: Sadece Bu Projenin Widgetlarini Kullan
+                inherit: 'Varsayilanlari Kullan'
+                append: 'Varsayilanlara Ekle'
+                replace: 'Sadece Bu Projenin Widgetlarini Kullan'
           -
             handle: hide_sidebar_widgets_on_mobile
             field:
               type: toggle
-              display: Widgetlari Mobilde Gizle
-              instructions: Aciksa sidebar widgetlari mobilde gosterilmez, sadece ust ozet alani kalir.
-              default: false
+              display: 'Widgetlari Mobilde Gizle'
+              instructions: 'Aciksa sidebar widgetlari mobilde gosterilmez, sadece ust ozet alani kalir.'
           -
             handle: sidebar_widgets
             field:
               type: replicator
-              display: Sidebar Widgetlari
+              display: 'Sidebar Widgetlari'
               collapse: accordion
-              previews: true
               fullscreen: false
-              button_label: Widget Ekle
+              button_label: 'Widget Ekle'
               sets:
                 widgets:
                   display: Widget
                   sets:
                     content_navigation:
-                      display: Icerik Navigasyon
+                      display: 'Icerik Navigasyon'
                       fields:
                         -
                           handle: widget_title
                           field:
                             type: text
-                            display: Widget Basligi
-                            default: Icerik Navigasyonu
+                            display: 'Widget Basligi'
+                            default: 'Icerik Navigasyonu'
                             replicator_preview: true
                     latest_news:
-                      display: Son Eklenen Haberler
+                      display: 'Son Eklenen Haberler'
                       fields:
                         -
                           handle: widget_title
                           field:
                             type: text
-                            display: Widget Basligi
-                            default: Son Eklenen Haberler
+                            display: 'Widget Basligi'
+                            default: 'Son Eklenen Haberler'
                             replicator_preview: true
                         -
                           handle: post_limit
                           field:
                             type: integer
-                            display: Gosterilecek Haber Sayisi
+                            display: 'Gosterilecek Haber Sayisi'
                             default: 3
                     menu:
                       display: Menu
@@ -220,7 +205,7 @@ tabs:
                           handle: widget_title
                           field:
                             type: text
-                            display: Widget Basligi
+                            display: 'Widget Basligi'
                             default: Menu
                             replicator_preview: true
                         -
@@ -232,65 +217,66 @@ tabs:
                             validate:
                               - required
                     project_details:
-                      display: Proje Detaylari
+                      display: 'Proje Detaylari'
                       fields:
                         -
                           handle: widget_title
                           field:
                             type: text
-                            display: Widget Basligi
-                            default: Proje Detaylari
+                            display: 'Widget Basligi'
+                            default: 'Proje Detaylari'
                             replicator_preview: true
                         -
                           handle: show_project_type
                           field:
                             type: toggle
-                            display: Is Turunu Goster
+                            display: 'Is Turunu Goster'
                             default: true
                             width: 33
                         -
                           handle: show_project_category
                           field:
                             type: toggle
-                            display: Kategoriyi Goster
+                            display: 'Kategoriyi Goster'
                             default: true
                             width: 33
                         -
                           handle: show_project_sector
                           field:
                             type: toggle
-                            display: Sektoru Goster
+                            display: 'Sektoru Goster'
                             default: true
                             width: 33
                         -
                           handle: show_completion_year
                           field:
                             type: toggle
-                            display: Yili Goster
+                            display: 'Yili Goster'
                             default: true
                             width: 50
                         -
                           handle: show_project_location
                           field:
                             type: toggle
-                            display: Sehir/Lokasyonu Goster
+                            display: 'Sehir/Lokasyonu Goster'
                             default: true
                             width: 50
       -
-        display: Proje Detayi
+        display: 'Proje Detayi'
         fields:
-          -
-            handle: project_scope
-            field:
-              type: markdown
-              display: Kapsam
-          -
-            handle: project_results
-            field:
-              type: markdown
-              display: Sonuclar
           -
             handle: content
             field:
               type: markdown
-              display: Uzun Icerik
+              display: 'Uzun Icerik'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -25,7 +25,7 @@
 
             <aside class="contact-page-sidebar">
                 <div class="contact-page-note" data-reveal>
-                    <span class="eyebrow">Iletisim Notu</span>
+                    <span class="eyebrow">{{ contact_note_eyebrow ?? 'İletişim Notu' }}</span>
                     {{ if contact_note_title }}
                         <h2 class="contact-page-note-title">{{ contact_note_title }}</h2>
                     {{ /if }}
@@ -36,14 +36,14 @@
                     <div class="contact-page-note-stack">
                         {{ if contact_settings:phone_display && contact_settings:phone_link }}
                             <a href="{{ contact_settings:phone_link }}" class="contact-page-note-link">
-                                <span class="contact-page-note-link-label">Telefon</span>
+                                <span class="contact-page-note-link-label">{{ contact_note_phone_label ?? 'Telefon' }}</span>
                                 <span class="contact-page-note-link-value">{{ contact_settings:phone_display }}</span>
                             </a>
                         {{ /if }}
 
                         {{ if contact_settings:email && contact_settings:email_link }}
                             <a href="{{ contact_settings:email_link }}" class="contact-page-note-link">
-                                <span class="contact-page-note-link-label">E-posta</span>
+                                <span class="contact-page-note-link-label">{{ contact_note_email_label ?? 'E-posta' }}</span>
                                 <span class="contact-page-note-link-value">{{ contact_settings:email }}</span>
                             </a>
                         {{ /if }}
@@ -51,10 +51,10 @@
 
                     <div class="contact-page-actions">
                         {{ if contact_settings:whatsapp_url }}
-                            <a href="{{ contact_settings:whatsapp_url }}" class="contact-page-action contact-page-action-primary">WhatsApp ile Yazin</a>
+                            <a href="{{ contact_settings:whatsapp_url }}" class="contact-page-action contact-page-action-primary">{{ contact_note_whatsapp_button ?? 'WhatsApp ile Yazın' }}</a>
                         {{ /if }}
                         {{ if contact_settings:email_link }}
-                            <a href="{{ contact_settings:email_link }}" class="contact-page-action">E-posta Gonderin</a>
+                            <a href="{{ contact_settings:email_link }}" class="contact-page-action">{{ contact_note_email_button ?? 'E-posta Gönderin' }}</a>
                         {{ /if }}
                     </div>
                 </div>
