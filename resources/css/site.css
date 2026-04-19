@@ -2423,7 +2423,7 @@
     }
 
     .footer-nav-grid {
-        @apply grid gap-10 sm:grid-cols-2 xl:grid-cols-3;
+        @apply hidden gap-10 sm:grid-cols-2 xl:grid-cols-3 lg:grid;
     }
 
     .footer-column {
@@ -2451,11 +2451,24 @@
     }
 
     .footer-bottom {
-        @apply flex flex-col gap-4 border-t border-slate-200 py-5 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between;
+        @apply flex flex-row items-center justify-between gap-4 border-t border-slate-200 py-5 text-sm text-slate-500;
+    }
+
+    .footer-bottom-left {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .footer-socials {
         @apply flex flex-wrap gap-3;
+        margin-right: 3.75rem; /* back-to-top butonunun genişliğini hesaba kat */
+    }
+
+    @media (min-width: 64rem) {
+        .footer-socials {
+            margin-right: 0;
+        }
     }
 
     .footer-social-link {
@@ -2469,6 +2482,28 @@
     .footer-social-link:hover {
         border-color: #0f172a;
         color: #0f172a;
+    }
+
+    .footer-macework-signature {
+        display: block;
+        opacity: 0.5;
+        color: #475569;
+        transition: opacity 0.25s ease;
+        line-height: 0;
+    }
+
+    .footer-macework-signature:hover {
+        opacity: 1;
+    }
+
+    @media (min-width: 64rem) {
+        .footer-macework-signature {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     .inline-link:hover,
